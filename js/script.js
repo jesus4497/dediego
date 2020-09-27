@@ -84,5 +84,15 @@ $( ".maps" ).mouseleave(function() {
     	} else {
         	$(".page-header").removeClass("active");
         }
-    })
+	})
+	
+$('#dropdown-menu').click(function () {
+	if($(".menu-container__cartas-dropdown-item").hasClass('active')) {
+		$(".menu-container__cartas-dropdown-item").removeClass('active');
+		$(".menu-container__cartas-dropdown-info-icon").removeClass('active');
+	}else {
+		$(".menu-container__cartas-dropdown-item").addClass('active');
+		$(".menu-container__cartas-dropdown-info-icon").addClass('active');
+	}
+});
     
