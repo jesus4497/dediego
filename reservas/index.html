@@ -65,7 +65,14 @@
       <nav class="header-nav">
         <ul class="menu-container" id="menu-container">
           <li><a href="/">Inicio</a></li>
-          <li><a href="/cartas">CARTAS</a></li>
+          <li class="menu-container__cartas-dropdown" id="dropdown-menu">
+            CARTAS
+            <div class="menu-container__cartas-dropdown-info-icon on" id="more-cookie-info">
+              <img src="../images/icons/chevron-down.svg">
+            </div>
+        </li>
+        <li class="menu-container__cartas-dropdown-item"><a href="/cartas">Carta</a></li>
+        <li class="menu-container__cartas-dropdown-item final"><a href="/menu-del-dia">Menú del día</a></li>
           <li><a href="/galeria">Fotos</a></li>
           <li id="current">
             <a href="/reservas">Reservas <span>(&Contacto)</span></a>

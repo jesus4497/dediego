@@ -356,4 +356,13 @@
         <image:title>logotipo de Dediego</image:title>
       </image:image>
   </url>
+  <url>
+    <loc>http://www.dediego-pinchosbar.com/menu-del-dia/</loc>
+    <lastmod>2019-03-11</lastmod>
+    <changefreq>daily</changefreq>
+      <image:image>
+        <image:loc>http://www.dediego-pinchosbar.com/images/ddiego-white-logo1.svg</image:loc>
+        <image:title>logotipo de Dediego</image:title>
+      </image:image>
+  </url>
 </urlset>

@@ -49,7 +49,14 @@
       <nav class="header-nav">
         <ul class="menu-container" id="menu-container">
           <li><a href="/">Inicio</a></li>
-          <li id="current"><a href="/cartas">CARTAS</a></li>
+          <li class="menu-container__cartas-dropdown" id="dropdown-menu">
+            CARTAS
+            <div class="menu-container__cartas-dropdown-info-icon on" id="more-cookie-info">
+              <img src="../images/icons/chevron-down.svg">
+            </div>
+        </li>
+        <li class="menu-container__cartas-dropdown-item"><a href="/cartas">Carta</a></li>
+        <li class="menu-container__cartas-dropdown-item final"><a href="/menu-del-dia">Menú del día</a></li>
           <li><a href="/galeria">Fotos</a></li>
           <li>
             <a href="/reservas">Reservas <span>(&Contacto)</span></a>
@@ -95,6 +102,9 @@
         <div class="header-mobile-cta-item">
           <a href="/reservas">Reserva</a>
         </div>
+        <div class="header-mobile-cta-item">
+          <a href="/menu-del-dia">Menú del día</a>
+        </div>
       </div>
     </header>
 
@@ -106,81 +116,7 @@
           </div>
         </div>
       </section>
-      <section class="meal-wrapper">
-        <div class="meal-cta">
-          <div class="meal-cta-text">
-            <p>Pide y ven a recogerlo (10% dto.)</p>
-          </div>
-          <div class="meal-cta-locations">
-            <div class="meal-cta-locations-item">
-              <p class="crossed">Condesa Venadito 5</p>
-              <a class="crossed" href="tel:910561167">91 056 11 67</a>
-              <p class="no-margin">(a partir del 13 de mayo en Diego de León 60)</p>
-            </div>
-            <div class="meal-cta-locations-item">
-              <p>Diego León 60</p>
-              <a href="tel:913092909">91 309 29 09</a>
-            </div>
-          </div>
-          <div class="meal-cta-delivery">
-            <div class="meal-cta-text">
-              <p>Pide a través de:</p>
-            </div>
-            <div class="meal-cta-providers">
-              <div class="meal-cta-providers-item">
-                <a href="https://glovoapp.com/es_AR/mad/store/dediego-madrid/" target="_blank">
-                  <img src="/images/glovo.png" alt="" />
-                  <p>Glovo</p>
-                </a>
-              </div>
-              <div class="meal-cta-providers-item">
-                <a href="https://deliveroo.es/es/menu/madrid/san-pascual/ddiego-pinchos-bar" target="_blank">
-                  <img src="/images/deliveroo.jpg" alt="" />
-                  <p>Deliveroo</p>
-                </a>
-              </div>
-              <div class="meal-cta-providers-item">
-                <a
-                  href="https://www.ubereats.com/es/madrid/food-delivery/de-diego-pinchos/HA1Ol615Qxa4ZczWJzeQHQ"
-                  target="_blank"
-                >
-                  <img src="/images/uber-eats.png" alt="" />
-                  <p>Uber Eats</p>
-                </a>
-              </div>
-              <!-- <div class="meal-cta-providers-item">
-                <img src="/images/just-eat.png" alt="" />
-                <p>Just Eat</p>
-              </div>
-              <div class="meal-cta-providers-item">
-                <img src="/images/glovo.png" alt="" />
-                <p>Glovo</p>
-              </div> -->
-            </div>
-            <div class="delivery-text">
-              <p>(a partir del 13 de mayo en Diego de León 60)</p>
-            </div>
-          </div>
-        </div>
-
-        <section class="traditional-menu">
-          <div class="traditional-menu-square">
-            <div class="traditional-menu-title-container">
-              <div class="traditional-title"><p>Menú Tradición 12€</p></div>
-              <div class="traditional-subtitle"><p>(Para 1 persona)</p></div>
-            </div>
-            <ul class="traditional-list">
-              <li><p>2 croquetas de jamón</p></li>
-              <li><p>+</p></li>
-              <li><p>Tapa ensaladla rusa</p></li>
-              <li><p>+</p></li>
-              <li><p>Salmorejo</p></li>
-              <li><p>+</p></li>
-              <li><p>pincho tortilla</p></li>
-            </ul>
-          </div>
-        </section>
-
+      <section class="meal-wrapper space">
         <section class="meal-container">
           <div class="meal-column">
             <!-- entrantes -->
@@ -605,8 +541,88 @@
                 </div>
               </div>
             </div>
+
+            <div class="meal-square">
+              <div class="traditional-menu-square">
+                <div class="traditional-menu-title-container">
+                  <div class="traditional-title"><p>Combo Tradición 12€</p></div>
+                  <div class="traditional-subtitle"><p>(Para 1 persona, Bebida no incluida)</p></div>
+                </div>
+                <ul class="traditional-list">
+                  <li><p>2 croquetas de jamón</p></li>
+                  <li><p>+</p></li>
+                  <li><p>Tapa ensaladla rusa</p></li>
+                  <li><p>+</p></li>
+                  <li><p>Salmorejo</p></li>
+                  <li><p>+</p></li>
+                  <li><p>pincho tortilla</p></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
+        
+        <div class="meal-cta">
+          <div class="meal-cta-text">
+            <p>Pide y ven a recogerlo (10% dto.)</p>
+          </div>
+          <div class="meal-cta-locations">
+            <!-- <div class="meal-cta-locations-item">
+              <p class="crossed">Condesa Venadito 5</p>
+              <a class="crossed" href="tel:910561167">91 056 11 67</a>
+              <p class="no-margin">(a partir del 13 de mayo en Diego de León 60)</p>
+            </div> -->
+            <div class="meal-cta-locations-item">
+              <p>Diego León 60</p>
+              <a href="tel:913092909">91 309 29 09</a>
+            </div>
+          </div>
+          <div class="meal-cta-delivery">
+            <div class="meal-cta-text">
+              <p>Pide a través de:</p>
+            </div>
+            <div class="meal-cta-providers">
+              <div class="meal-cta-providers-item">
+                <a href="https://glovoapp.com/es_AR/mad/store/dediego-madrid/" target="_blank">
+                  <img src="/images/glovo.png" alt="" />
+                  <p>Glovo</p>
+                </a>
+              </div>
+              <div class="meal-cta-providers-item">
+                <a href="https://deliveroo.es/es/menu/madrid/san-pascual/ddiego-pinchos-bar" target="_blank">
+                  <img src="/images/deliveroo.jpg" alt="" />
+                  <p>Deliveroo</p>
+                </a>
+              </div>
+              <div class="meal-cta-providers-item">
+                <a
+                  href="https://www.ubereats.com/es/madrid/food-delivery/de-diego-pinchos/HA1Ol615Qxa4ZczWJzeQHQ"
+                  target="_blank"
+                >
+                  <img src="/images/uber-eats.png" alt="" />
+                  <p>Uber Eats</p>
+                </a>
+              </div>
+       
+              <div class="meal-cta-providers-item">
+                <a
+                  href="https://www.just-eat.es/restaurants-ddiego-madrid/menu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <img src="/images/just-eat.png" alt="" />
+                <p>Just Eat</p>
+              </div>
+              <!-- <div class="meal-cta-providers-item">
+                <img src="/images/glovo.png" alt="" />
+                <p>Glovo</p>
+              </div> -->
+            </div>
+            <!-- <div class="delivery-text">
+              <p>(a partir del 13 de mayo en Diego de León 60)</p>
+            </div> -->
+          </div>
+        </div>
       </section>
     </main>
 

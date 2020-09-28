@@ -327,8 +327,49 @@ main {
   margin-bottom: 2rem;
   width: 100%;
   font-size: 16px;
-  display: block;
 }
+
+.menu-container__cartas-dropdown {
+  cursor: pointer;
+  position: relative;
+  height: 32px;
+}
+
+
+.menu-container__cartas-dropdown-info-icon {
+  max-width: 15px;
+  max-height: 15px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menu-container__cartas-dropdown-info-icon.active {
+  transform: rotate(180deg);
+}
+
+.menu-container .menu-container__cartas-dropdown-item {
+  font-size: 12px;
+  line-height: 18px;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0px;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-container .menu-container__cartas-dropdown-item.active { 
+  opacity: 1;
+  visibility: visible;
+  max-height: 1000px;
+  padding-top: 8px;
+}
+
+.menu-container__cartas-dropdown-item.active.final {
+  margin-bottom: 32px;
+}
+
 .menu-container li:last-child {
   display: flex;
   align-items: center;
@@ -618,6 +659,18 @@ main {
     align-items: center;
     justify-content: center;
     padding: 0;
+    border-top: 0.5px solid #5f5858;
+    /* border-bottom: 0.5px solid #3a3434; */
+  }
+  .menu-container__cartas-dropdown-item.active.final {
+    margin-bottom: 0;
+  }
+  .menu-container__cartas-dropdown-info-icon {
+    right: 10%;
+    top: 25%;
+  }
+  .menu-container__cartas-dropdown-item {
+    border: 0;
   }
   .icon-facebook p {
     display: none;
@@ -711,10 +764,6 @@ main {
   }
   .page-header.js-color {
     background-color: #1d1d1d;
-  }
-  .menu-container li {
-    border-top: 0.5px solid #5f5858;
-    border-bottom: 0.5px solid #3a3434;
   }
   .menu-container li:last-child {
     border-bottom: 1px solid #3a3434;
@@ -2645,6 +2694,10 @@ body:after {
   background-size: cover;
 }
 
+.meal-wrapper.space {
+  padding-top: 100px;
+}
+
 .meal-cta {
   text-align: center;
   padding: 44px 24px 60px;
@@ -2659,6 +2712,14 @@ body:after {
 .traditional-menu {
   padding: 100px 100px 0;
   margin-bottom: 100px;
+}
+
+.meal-of-the-day {
+  display: flex;
+}
+
+.meal-of-the-day__item {
+  text-align: left;
 }
 
 .meal-container {
@@ -2720,6 +2781,15 @@ body:after {
   background: #ffffff;
   max-width: 500px;
   margin: 0 auto;
+}
+
+.traditional-menu-square.expanded {
+  max-width: 700px;
+}
+
+.meal-of-the-day {
+  display: flex;
+  justify-content: space-between;
 }
 
 .meal-square {
@@ -2909,6 +2979,14 @@ body:after {
   .meal-wrapper {
     padding-left: 0;
   }
+
+  .meal-of-the-day {
+    flex-direction: column;
+  }
+
+  .second-option {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 60rem) {
@@ -2922,7 +3000,7 @@ body:after {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   .meal-cta {
     padding: 0;
     padding: 42px 24px;
