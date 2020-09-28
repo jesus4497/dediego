@@ -75,24 +75,24 @@ $(".maps").mouseleave(function () {
 
 // color header on scroll
 
-	$( window ).on( 'scroll', function() {
-		if($(this).scrollTop() > 0) {
-     		$(".page-header").addClass("active");
-    	} else {
-        	$(".page-header").removeClass("active");
-        }
-	})
-	
-$('#dropdown-menu').click(function () {
-	if($(".menu-container__cartas-dropdown-item").hasClass('active')) {
-		$(".menu-container__cartas-dropdown-item").removeClass('active');
-		$(".menu-container__cartas-dropdown-info-icon").removeClass('active');
-	}else {
-		$(".menu-container__cartas-dropdown-item").addClass('active');
-		$(".menu-container__cartas-dropdown-info-icon").addClass('active');
-	}
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > 0) {
+    $(".page-header").addClass("active");
+  } else {
+    $(".page-header").removeClass("active");
+  }
 });
-    
+
+$("#dropdown-menu").click(function () {
+  if ($(".menu-container__cartas-dropdown-item").hasClass("active")) {
+    $(".menu-container__cartas-dropdown-item").removeClass("active");
+    $(".menu-container__cartas-dropdown-info-icon").removeClass("active");
+  } else {
+    $(".menu-container__cartas-dropdown-item").addClass("active");
+    $(".menu-container__cartas-dropdown-info-icon").addClass("active");
+  }
+});
+
 $(window).on("scroll", function () {
   if ($(this).scrollTop() > 0) {
     $(".page-header").addClass("active");
@@ -103,19 +103,25 @@ $(window).on("scroll", function () {
 
 /** Slideshow gallery */
 let slideIndex = 1;
+let slideshowTimeoutId;
 showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  //   slideIndex = slideIndex + n;
+  showSlides(slideIndex + n);
 }
 
 // Thumbnail image controls
+
 function currentSlide(n) {
+  //   slideIndex = n;
   showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
+  slideIndex = n;
+  clearTimeout(slideshowTimeoutId);
   let i;
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("demo");
@@ -136,7 +142,15 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+
   slides[slideIndex - 1].className += " slideshow-gallery--active";
   dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
+
+  slideshowTimeoutId = setTimeout(() => {
+    if (slides.length >= slideIndex + 1) {
+      showSlides(slideIndex + 1);
+    } else {
+      showSlides(1);
+    }
+  }, 4000);
 }
