@@ -2529,6 +2529,14 @@ body:after {
   margin-bottom: 100px;
 }
 
+.meal-of-the-day {
+  display: flex;
+}
+
+.meal-of-the-day__item {
+  text-align: left;
+}
+
 .meal-container {
   padding: 0 100px;
   margin-bottom: 100px;
@@ -2588,6 +2596,15 @@ body:after {
   background: #ffffff;
   max-width: 500px;
   margin: 0 auto;
+}
+
+.traditional-menu-square.expanded {
+  max-width: 700px;
+}
+
+.meal-of-the-day {
+  display: flex;
+  justify-content: space-between;
 }
 
 .meal-square {
@@ -2777,6 +2794,14 @@ body:after {
   .meal-wrapper {
     padding-left: 0;
   }
+
+  .meal-of-the-day {
+    flex-direction: column;
+  }
+
+  .second-option {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 60rem) {
@@ -2790,7 +2815,7 @@ body:after {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   .meal-cta {
     padding: 0;
     padding: 42px 24px;
