@@ -442,7 +442,7 @@ main {
   transition: 0.6s ease-in-out;
   opacity: 0;
   display: none;
-  grid-template-columns: 50%;
+  grid-template-columns: 80%;
 }
 
 .slideshow-gallery .mySlides.slideshow-gallery--active {
@@ -570,7 +570,7 @@ main {
 
 @media (min-width: 85rem) {
   .slideshow-gallery .mySlides {
-    grid-template-columns: 40%;
+    grid-template-columns: 80%;
   }
 }
 
